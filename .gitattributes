@@ -1,0 +1,16 @@
+# Normalizza automaticamente i fine riga per i file di testo
+* text=auto
+
+# File sorgente web
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.md text eol=lf
+
+# Immagini trattate rigorosamente come file binari
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.avif binary
+*.svg text eol=lf

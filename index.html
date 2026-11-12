@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Portfolio personale di Mattia Del Fabro — Fotografia, Formazione e Progetti." />
+  <title>Mattia Del Fabro — Portfolio</title>
+
+  <!-- Google Fonts: Syne (Display), Plus Jakarta Sans (UI), JetBrains Mono (Numerazione) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Plus+Jakarta+Sans:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- Texture grana pellicola impercettibile -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- ================= HAMBURGER MENU (Visibile solo fuori dalla Home) ================= -->
+  <div class="floating-nav" id="floating-nav">
+    <button
+      type="button"
+      class="nav-burger"
+      id="nav-burger"
+      aria-expanded="false"
+      aria-controls="nav-drawer"
+      aria-label="Apri menu di navigazione"
+    >
+      <span class="nav-burger__lines" aria-hidden="true">
+        <span class="nav-burger__line nav-burger__line--top"></span>
+        <span class="nav-burger__line nav-burger__line--bottom"></span>
+      </span>
+    </button>
+
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+    <nav class="nav-drawer" id="nav-drawer" aria-hidden="true" aria-label="Menu di navigazione">
+      <div class="nav-drawer__header">
+        <span class="mono-tag">NAVIGAZIONE</span>
+      </div>
+      <ul class="nav-drawer__list">
+        <li class="nav-drawer__item">
+          <a href="#top" class="nav-drawer__link" data-section="top">
+            <span class="nav-drawer__label" data-text="Home"><span>Home</span></span>
+          </a>
+        </li>
+        <li class="nav-drawer__item">
+          <a href="#chi-sono" class="nav-drawer__link" data-section="chi-sono">
+            <span class="nav-drawer__label" data-text="Chi sono"><span>Chi sono</span></span>
+          </a>
+        </li>
+        <li class="nav-drawer__item">
+          <a href="#formazione" class="nav-drawer__link" data-section="formazione">
+            <span class="nav-drawer__label" data-text="Formazione"><span>Formazione</span></span>
+          </a>
+        </li>
+        <li class="nav-drawer__item">
+          <a href="#foto" class="nav-drawer__link" data-section="foto">
+            <span class="nav-drawer__label" data-text="Foto"><span>Foto</span></span>
+          </a>
+        </li>
+        <li class="nav-drawer__item">
+          <a href="#contatti" class="nav-drawer__link" data-section="contatti">
+            <span class="nav-drawer__label" data-text="Contatti"><span>Contatti</span></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- ================= HERO / LANDING SECTION ================= -->
+  <header class="hero" id="top">
+    <!-- Immagine Full-Screen libera da sovrapposizioni sul soggetto -->
+    <div class="hero__media" aria-hidden="true">
+      <img
+        src="portfolio/hero.jpg"
+        alt="Autoritratto riflesso in movimento di Mattia Del Fabro"
+        class="hero__img"
+        fetchpriority="high"
+      />
+      <div class="hero__vignette"></div>
+    </div>
+
+    <!-- Colonna Editoriale Minimal ancorata a sinistra -->
+    <div class="hero__aside">
+      <h1 class="hero__title" aria-label="Mattia Del Fabro">
+        <span class="title__mask">
+          <span class="title__line">Mattia</span>
+        </span>
+        <span class="title__mask">
+          <span class="title__line">Del Fabro</span>
+        </span>
+      </h1>
+
+      <nav class="hero__nav" aria-label="Navigazione principale">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#chi-sono" class="nav__link">
+              <span class="nav__label" data-text="Chi sono"><span>Chi sono</span></span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#formazione" class="nav__link">
+              <span class="nav__label" data-text="Formazione"><span>Formazione</span></span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#foto" class="nav__link">
+              <span class="nav__label" data-text="Foto"><span>Foto</span></span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#contatti" class="nav__link">
+              <span class="nav__label" data-text="Contatti"><span>Contatti</span></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main-content">
+
+    <!-- ================= 01. CHI SONO ================= -->
+    <section id="chi-sono" class="about" aria-labelledby="about-heading">
+      <div class="about__grid">
+
+        <!-- Lato Sinistro: Immagine ChiSono.jpg che appare allo scroll -->
+        <figure class="about__media" data-reveal="left">
+          <div class="about__img-wrap">
+            <img
+              src="portfolio/ChiSono.jpg"
+              alt="Ritratto di Mattia Del Fabro con fotocamera Olympus"
+              class="about__img"
+              loading="lazy"
+            />
+          </div>
+        </figure>
+
+        <!-- Lato Destro: Scritta "Chi sono" (si sposta a destra e cresce allo scroll) + Testo Placeholder sotto -->
+        <div class="about__content">
+          <div class="about__header">
+            <h2 id="about-heading" class="about__title" data-scroll-grow>
+              Chi sono
+            </h2>
+            <div class="about__rule" aria-hidden="true"></div>
+          </div>
+
+          <div class="about__body" data-reveal="up">
+            <p class="about__lead">
+              <ul>
+                <li>Tecnico Informatico</li>
+                <li>Streetphotograher</li>
+                <li>Appasionato di comunicazione digitale</li>
+              </ul>
+            </p>
+            <p class="about__text">
+             Sono Mattia Del Fabro, Digital Specialist e Web Developer con base in provincia di Udine. Con un background tecnico informatico e una forte passione per la fotografia e il design delle interfacce, mi occupo di creare, gestire e ottimizzare ecosistemi digitali a 360 gradi. Non mi fermo a un solo ambito: passo con naturalezza dallo sviluppo front-end e dalla gestione di database/CRM alla produzione di contenuti fotografici e all'automazione dei processi tramite strumenti AI. Cerco sempre il modo più pulito, veloce ed efficace per trasformare un'idea in uno strumento operativo che funzioni davvero.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 02. FORMAZIONE ================= -->
+    <section id="formazione" class="edu" aria-labelledby="edu-heading">
+      <div class="edu__container">
+        <div class="edu__header">
+          <h2 id="edu-heading" class="edu__title" data-scroll-edu>
+            Formazione
+          </h2>
+          <div class="edu__rule" aria-hidden="true"></div>
+        </div>
+
+        <div class="edu__body" data-reveal="up">
+          <p class="edu__lead">
+            Un percorso costruito attraverso lo studio costante, la sperimentazione pratica e l'approfondimento tecnico e visivo.
+          </p>
+
+          <div class="edu__list">
+            <!-- 01. Percorso Universitario -->
+            <article class="edu__item">
+              <div class="edu__item-header">
+                <h3 class="edu__item-title">Percorso Universitario in ambito Informatico</h3>
+                <div class="edu__item-meta">
+                  <span class="edu__inst">Università degli Studi di Udine (Uniud)</span>
+                  <span class="edu__meta-sep" aria-hidden="true">|</span>
+                  <span class="edu__period mono-tag">2026 – In corso</span>
+                </div>
+              </div>
+              <p class="edu__text">
+                Approfondimento delle basi di programmazione, architetture digitali e logica computazionale.
+              </p>
+              <p class="edu__note">
+                (Percorso gestito con flessibilità e opzione di passaggio alla modalità online/a distanza per garantire piena disponibilità lavorativa full-time).
+              </p>
+            </article>
+
+            <!-- 02. Diploma Tecnico -->
+            <article class="edu__item">
+              <div class="edu__item-header">
+                <h3 class="edu__item-title">Diploma di Istruzione Tecnica – Informatica e Telecomunicazioni</h3>
+                <div class="edu__item-meta">
+                  <span class="edu__inst">I.T.I. &ldquo;G. Bearzi&rdquo;, Udine</span>
+                  <span class="edu__meta-sep" aria-hidden="true">|</span>
+                  <span class="edu__period mono-tag">2021 – 2026</span>
+                </div>
+              </div>
+              <p class="edu__text">
+                Formazione tecnica completa focalizzata su sviluppo software e web (HTML, CSS, JavaScript, PHP, Java, Python), progettazione e gestione di database relazionali (SQL), amministrazione di sistemi (Linux/Windows) e infrastrutture di rete.
+              </p>
+            </article>
+
+            <!-- 03. Certificazioni & Formazione Continua -->
+            <article class="edu__item">
+              <div class="edu__item-header">
+                <h3 class="edu__item-title">Certificazioni &amp; Formazione Continua</h3>
+                <div class="edu__item-meta">
+                  <span class="edu__period mono-tag">Self-Directed Learning</span>
+                </div>
+              </div>
+              <ul class="edu__sublist">
+                <li class="edu__subitem">
+                  <strong class="edu__subitem-label">Fotografia &amp; Comunicazione Visiva:</strong>
+                  <span class="edu__text">Ricerca costante nell'ambito della <em>street &amp; urban photography</em>, studio della composizione, gestione della luce e <em>visual storytelling</em>. Padronanza dell'intero flusso di sviluppo digitale (RAW processing, <em>color grading</em> e post-produzione editoriale) e cura della direzione artistica per progetti web e contenuti digitali.</span>
+                </li>
+                <li class="edu__subitem">
+                  <strong class="edu__subitem-label">AI, Automation &amp; Modern Web Design:</strong>
+                  <span class="edu__text">Studio e sperimentazione su flussi di lavoro con Intelligenza Artificiale (LLM locali e via API, Prompt Engineering), design di interfacce moderne (UI/UX, tipografia, gerarchia visiva) e sviluppo con framework attuali (Tailwind CSS, Flutter).</span>
+                </li>
+                <li class="edu__subitem">
+                  <strong class="edu__subitem-label">Certificazione MikroTik:</strong>
+                  <span class="edu__text">Configurazione, gestione e troubleshooting di reti e apparati di routing.</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PLACEHOLDER SEZIONI SUCCESSIVE ================= -->
+
+    <!-- ================= 03. FOTO (GALLERIA COMPLETA 36 SCATTI) ================= -->
+    <section id="foto" class="gallery" aria-labelledby="gallery-heading">
+      <div class="gallery__container">
+
+        <!-- Header in alto al centro: la scritta Foto converge al centro e cresce allo scroll -->
+        <div class="gallery__header">
+          <h2 id="gallery-heading" class="gallery__title" data-scroll-photo>
+            Foto
+          </h2>
+          <div class="gallery__rule" aria-hidden="true"></div>
+          <p class="gallery__meta mono-tag">Archivio Visivo — 36 Scatti</p>
+        </div>
+
+        <!-- Wrapper espandibile: mostra le prime 3 righe mantenendo la disposizione Masonry identica -->
+        <div class="gallery__viewport" id="gallery-viewport">
+          <div class="gallery__grid" id="gallery-grid">
+            <figure class="gallery__item" data-reveal="up" data-index="01">
+              <img src="portfolio/_1010010_edited.jpg" alt="Scatto fotografico 01 — Mattia Del Fabro" width="3256" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">01 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="02">
+              <img src="portfolio/_1010038_edited.jpg" alt="Scatto fotografico 02 — Mattia Del Fabro" width="3256" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">02 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="03">
+              <img src="portfolio/_1010052_edited.jpg" alt="Scatto fotografico 03 — Mattia Del Fabro" width="3256" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">03 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="04">
+              <img src="portfolio/_1010062_edited.jpg" alt="Scatto fotografico 04 — Mattia Del Fabro" width="3256" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">04 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="05">
+              <img src="portfolio/_1010075_edited.jpg" alt="Scatto fotografico 05 — Mattia Del Fabro" width="3256" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">05 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="06">
+              <img src="portfolio/_1010164_edited.jpg" alt="Scatto fotografico 06 — Mattia Del Fabro" width="4792" height="3256" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">06 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="07">
+              <img src="portfolio/_1010079_edited.jpg" alt="Scatto fotografico 07 — Mattia Del Fabro" width="3256" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">07 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="08">
+              <img src="portfolio/_1010166_edited.jpg" alt="Scatto fotografico 08 — Mattia Del Fabro" width="3256" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">08 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="09">
+              <img src="portfolio/_1010195_edited.jpg" alt="Scatto fotografico 09 — Mattia Del Fabro" width="4174" height="2836" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">09 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="10">
+              <img src="portfolio/_3020044_edited.jpg" alt="Scatto fotografico 10 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">10 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="11">
+              <img src="portfolio/_3020061_edited.jpg" alt="Scatto fotografico 11 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">11 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="12">
+              <img src="portfolio/_3030075_edited.jpg" alt="Scatto fotografico 12 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">12 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="13">
+              <img src="portfolio/_3030077_edited.jpg" alt="Scatto fotografico 13 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">13 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="14">
+              <img src="portfolio/_3030113_edited.jpg" alt="Scatto fotografico 14 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">14 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="15">
+              <img src="portfolio/_3030155_edited.jpg" alt="Scatto fotografico 15 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">15 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="16">
+              <img src="portfolio/_3030201_edited.jpg" alt="Scatto fotografico 16 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">16 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="17">
+              <img src="portfolio/_3030213_edited.jpg" alt="Scatto fotografico 17 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">17 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="18">
+              <img src="portfolio/_3030222_edited.jpg" alt="Scatto fotografico 18 — Mattia Del Fabro" width="3198" height="4714" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">18 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="19">
+              <img src="portfolio/_3040374_edited.jpg" alt="Scatto fotografico 19 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">19 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="20">
+              <img src="portfolio/_3040394_edited.jpg" alt="Scatto fotografico 20 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">20 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="21">
+              <img src="portfolio/_5080007_edited.jpg" alt="Scatto fotografico 21 — Mattia Del Fabro" width="3256" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">21 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="22">
+              <img src="portfolio/_5120103_edited.jpg" alt="Scatto fotografico 22 — Mattia Del Fabro" width="3256" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">22 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="23">
+              <img src="portfolio/_5120121_edited.jpg" alt="Scatto fotografico 23 — Mattia Del Fabro" width="2657" height="3910" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">23 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="24">
+              <img src="portfolio/_5130132_edited.jpg" alt="Scatto fotografico 24 — Mattia Del Fabro" width="2719" height="4001" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">24 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="25">
+              <img src="portfolio/_A080026_edited_edited.jpg" alt="Scatto fotografico 25 — Mattia Del Fabro" width="3591" height="4727" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">25 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="26">
+              <img src="portfolio/_A080152_edited_edited.jpg" alt="Scatto fotografico 26 — Mattia Del Fabro" width="4335" height="3293" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">26 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="27">
+              <img src="portfolio/_A080039_edited_edited.jpg" alt="Scatto fotografico 27 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">27 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="28">
+              <img src="portfolio/_A080073_edited_edited.jpg" alt="Scatto fotografico 28 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">28 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="29">
+              <img src="portfolio/_A080112_edited_edited.jpg" alt="Scatto fotografico 29 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">29 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="30">
+              <img src="portfolio/_A080116_edited_edited.jpg" alt="Scatto fotografico 30 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">30 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="31">
+              <img src="portfolio/_A080121_edited_edited.jpg" alt="Scatto fotografico 31 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">31 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="32">
+              <img src="portfolio/_A080155_edited_edited.jpg" alt="Scatto fotografico 32 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">32 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="33">
+              <img src="portfolio/_A080185_edited_edited.jpg" alt="Scatto fotografico 33 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">33 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="34">
+              <img src="portfolio/_A080192_edited_edited.jpg" alt="Scatto fotografico 34 — Mattia Del Fabro" width="3640" height="4792" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">34 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="35">
+              <img src="portfolio/IMG_6683_edited.jpg" alt="Scatto fotografico 35 — Mattia Del Fabro" width="3186" height="4194" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">35 / 36</span></figcaption>
+            </figure>
+
+            <figure class="gallery__item" data-reveal="up" data-index="36">
+              <img src="portfolio/IMG_6687_edited.jpg" alt="Scatto fotografico 36 — Mattia Del Fabro" width="3186" height="4194" loading="lazy" decoding="async" class="gallery__img" />
+              <figcaption class="gallery__caption"><span class="mono-tag">36 / 36</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Bottone per espandere/comprimere le foto oltre le prime 3 righe -->
+        <div class="gallery__actions">
+          <button
+            type="button"
+            class="gallery__toggle-btn"
+            id="gallery-toggle-btn"
+            aria-expanded="false"
+          >
+            <span class="gallery__toggle-label" data-text="Visualizza tutto">
+              <span>Visualizza tutto</span>
+            </span>
+            <span class="gallery__toggle-count mono-tag">+27</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox Full-Screen per visualizzare ogni scatto per intero al click -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Visualizzazione foto a schermo intero">
+      <button class="lightbox__close mono-tag" type="button" aria-label="Chiudi">CHIUDI [ESC]</button>
+      <button class="lightbox__nav lightbox__nav--prev mono-tag" type="button" aria-label="Foto precedente">← PREV</button>
+      <div class="lightbox__stage">
+        <img src="" alt="" class="lightbox__img" />
+        <div class="lightbox__counter mono-tag">01 / 36</div>
+      </div>
+      <button class="lightbox__nav lightbox__nav--next mono-tag" type="button" aria-label="Foto successiva">NEXT →</button>
+    </div>
+
+    <!-- ================= 04. CONTATTI (COMPONENTE COPIA EMAIL ANTI-SCRAPER) ================= -->
+    <section id="contatti" class="contact" aria-labelledby="contact-heading">
+      <div class="contact__container">
+
+        <div class="contact__header">
+          <span class="mono-tag">04 / DISPONIBILE PER PROGETTI &amp; COLLABORAZIONI</span>
+          <h2 id="contact-heading" class="contact__title" data-scroll-contact>
+            Contatti
+          </h2>
+          <div class="contact__rule" aria-hidden="true"></div>
+        </div>
+
+        <!-- Componente Anti-Scraper: Zero email nel DOM statico -->
+        <div class="contact__vault-group" data-reveal="up">
+          <!-- Bottone Principale: Copia Email negli Appunti -->
+          <button
+            type="button"
+            class="email-vault"
+            id="email-copy-btn"
+            aria-label="Copia indirizzo email negli appunti"
+          >
+            <!-- Radial Spotlight che segue il cursore -->
+            <span class="email-vault__spotlight" aria-hidden="true"></span>
+
+            <!-- Icon Stack: Copy Icon (Default) + Animated SVG Checkmark (Copied) -->
+            <span class="email-vault__icon-wrap" aria-hidden="true">
+              <svg class="email-vault__icon email-vault__icon--copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <svg class="email-vault__icon email-vault__icon--check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+
+            <!-- Slot-Machine Text Stack (Default / Hover Preview / Copied) -->
+            <span class="email-vault__text-viewport">
+              <span class="email-vault__text-track">
+                <span class="email-vault__state email-vault__state--default" id="email-preview-text">
+                  Copia indirizzo email
+                </span>
+                <span class="email-vault__state email-vault__state--copied">
+                  Email copiata negli appunti!
+                </span>
+              </span>
+            </span>
+
+            <!-- Badge Tecnico Laterale -->
+            <span class="email-vault__badge mono-tag" id="email-badge-text" aria-hidden="true">
+              COPIA
+            </span>
+
+            <!-- Barra di progresso 2.5s per reset automatico -->
+            <span class="email-vault__timer" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <!-- Ancore Profili Social: LinkedIn & GitHub -->
+        <nav class="contact__socials" aria-label="Profili professionali" data-reveal="up">
+          <a
+            href="https://www.linkedin.com/in/mattia-del-fabro-a796b5429/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Profilo LinkedIn di Mattia Del Fabro (apre in una nuova scheda)"
+          >
+            <svg class="social-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <span class="social-link__label" data-text="LinkedIn"><span>LinkedIn</span></span>
+            <span class="social-link__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            href="https://github.com/MattiaDelFabro"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Profilo GitHub di Mattia Del Fabro (apre in una nuova scheda)"
+          >
+            <svg class="social-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+            <span class="social-link__label" data-text="GitHub"><span>GitHub</span></span>
+            <span class="social-link__arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <!-- Live Region per Screen Reader (Accessibilità WCAG) -->
+        <div id="email-live-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+        <!-- Footer Minimale -->
+        <footer class="contact__footer">
+          <span class="mono-tag">© 2026 MATTIA DEL FABRO — TUTTI I DIRITTI RISERVATI</span>
+          <a href="#top" class="contact__backtop mono-tag">TORNA SU ↑</a>
+        </footer>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
